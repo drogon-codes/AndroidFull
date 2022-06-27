@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPatient">
+
+    <EditText
+        android:id="@+id/etPatientName"
+        android:layout_width="297dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="31dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:hint="Patient Name"
+        app:layout_constraintBottom_toTopOf="@+id/etPatientIllness"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/etPatientIllness"
+        android:layout_width="304dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="30dp"
+        android:text=""
+        android:hint="Illness"
+        app:layout_constraintBottom_toTopOf="@+id/etPatientContact"
+        app:layout_constraintEnd_toEndOf="@+id/etPatientContact"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etPatientName"
+        app:layout_constraintTop_toBottomOf="@+id/etPatientName" />
+
+    <EditText
+        android:id="@+id/etPatientContact"
+        android:layout_width="297dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:hint="Contact"
+        app:layout_constraintBottom_toTopOf="@+id/rgGender"
+        app:layout_constraintEnd_toEndOf="@+id/rgGender"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPatientIllness" />
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="295dp"
+        android:layout_height="143dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPatientContact">
+
+        <RadioButton
+            android:id="@+id/rbGenderMale"
+            android:layout_width="283dp"
+            android:layout_height="70dp"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/rbGenderFemale"
+            android:layout_width="284dp"
+            android:layout_height="68dp"
+            android:text="Female" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAddPatient"
+        android:layout_width="226dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="54dp"
+        android:text="Save Changes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rgGender"
+        app:layout_constraintTop_toBottomOf="@+id/rgGender" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
